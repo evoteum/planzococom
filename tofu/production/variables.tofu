@@ -1,3 +1,9 @@
+variable "cloudflare_account_id" {
+  description = "The cloudflare account ID"
+  type        = string
+  sensitive   = true
+}
+
 variable "homepage_url" {
   description = "The web address of publicly available application"
   type        = string

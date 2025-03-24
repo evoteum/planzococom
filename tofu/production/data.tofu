@@ -1,5 +1,8 @@
-data "cloudflare_zone" "example_zone" {
+data "cloudflare_zone" "this" {
   filter {
-    name = local.domain
+    name    = local.domain
+    status  = "active"
+    paused  = false
+    account = var.cloudflare_account_id
   }
 }

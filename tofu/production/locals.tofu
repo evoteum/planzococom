@@ -1,3 +1,3 @@
 locals {
-    domain = regex("^https?://([^/]+)", var.homepage_url)[0]
+  domain = regex("^https?://([^/]+)", var.homepage_url)[0]
 }
