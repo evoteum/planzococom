@@ -42,14 +42,9 @@ Configures the redirect from planzoco.com to planzo.co
 [//]: # (REQUIRED)
 [//]: # (Delete as appropriate)
 
-1. [Security](#security)
-1. [Background](#background)
 1. [Install](#install)
 1. [Usage](#usage)
-1. [Any extra sections as required]
-1. [API](#api)
-1. [Maintainers](#maintainers)
-1. [Thanks](#thanks)
+1. [Repository Configuration](#repository-configuration)
 1. [Contributing](#contributing)
 1. [License](#license)
 
@@ -69,13 +64,13 @@ Configures the redirect from planzoco.com to planzo.co
 [//]: # (OPTIONAL IF documentation repo)
 [//]: # (ELSE REQUIRED)
 
-
+Nothing to install.
 
 ## Usage
 [//]: # (REQUIRED)
 [//]: # (Explain what the thing does. Use screenshots and/or videos.)
 
-
+Not for use. Just here to configure the domain redirect.
 
 [//]: # (Extra sections)
 [//]: # (OPTIONAL)
@@ -83,6 +78,14 @@ Configures the redirect from planzoco.com to planzo.co
 [//]: # (This is a space for ≥0 sections to be included,)
 [//]: # (each of which must have their own titles.)
 
+
+
+## Repository Configuration
+
+> [!WARNING]  
+> This repo is controlled by OpenTofu in the [estate-repos](https://github.com/evoteum/estate-repos) repository.  
+>  
+> Manual configuration changes will be overwritten the next time OpenTofu runs.
 
 
 [//]: # (## API)
@@ -116,10 +119,3 @@ PRs are welcome.
 [//]: # (REQUIRED)
 
 All our code is licenced under the AGPL-3.0. See [LICENSE](LICENSE) for more information.
-
----
-
-> [!WARNING]  
-> This repo is controlled by OpenTofu in the This repo publishes containers at [estate-repos](https://github.com/evoteum/estate-repos). repository.  
->  
-> Manual changes will be overwritten the next time OpenTofu runs.
