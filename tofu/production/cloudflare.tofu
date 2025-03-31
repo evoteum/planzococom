@@ -3,7 +3,7 @@ resource "cloudflare_ruleset" "redirect_to_planzo" {
   name        = "redirect-to-planzo"
   description = "Redirect all traffic to ${var.target_url}"
   kind        = "zone"
-  phase       = "http_request_dynamic_redirect"
+  phase       = "http_request_redirect"
 
   rules = [
     {
