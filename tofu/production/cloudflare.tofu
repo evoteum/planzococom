@@ -23,6 +23,7 @@ resource "cloudflare_ruleset" "redirect_all" {
     }
   ]
 }
+
 resource "cloudflare_dns_record" "apex_redirect" {
   zone_id = var.cloudflare_zone_id
   name    = "@"
@@ -31,7 +32,7 @@ resource "cloudflare_dns_record" "apex_redirect" {
   proxied = true
   ttl     = 1
 
-  comment = "Required so Cloudflare will apply a redirect. No real traffic needed. Silly, isn’t it?"
+  comment = "No traffic needed. Required so Cloudflare will apply the redirect rule. BECAUSE REASONS."
 }
 
 resource "cloudflare_dns_record" "www_redirect" {
@@ -42,5 +43,5 @@ resource "cloudflare_dns_record" "www_redirect" {
   proxied = true
   ttl     = 1
 
-  comment = "Required so Cloudflare will apply a redirect. No real traffic needed. Silly, isn’t it?"
+  comment = "No traffic needed. Required so Cloudflare will apply the redirect rule. BECAUSE REASONS."
 }
