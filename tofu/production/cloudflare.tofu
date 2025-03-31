@@ -1,14 +1,14 @@
 resource "cloudflare_ruleset" "redirect_all" {
   zone_id     = var.cloudflare_zone_id
-  name        = "redirect-to-planzo"
+  name        = "redirect-all"
   description = "Redirect all traffic to ${var.target_url}"
   kind        = "zone"
-  phase       = "http_request_redirect"
+  phase       = "http_request_dynamic_redirect"
 
   rules = [
     {
-      ref         = "redirect_to_planzo"
-      description = "Redirect all traffic to ${var.target_url}"
+      ref         = "redirect_all"
+      description = "Redirect everything to apex domain"
       expression  = "true"
       action      = "redirect"
       action_parameters = {
