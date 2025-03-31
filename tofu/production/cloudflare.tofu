@@ -27,7 +27,7 @@ resource "cloudflare_dns_record" "apex_redirect" {
   zone_id = var.cloudflare_zone_id
   name    = "@"
   type    = "A"
-  value   = "192.0.2.1"
+  content = "192.0.2.1"
   proxied = true
   ttl     = 3600
 
@@ -40,7 +40,7 @@ resource "cloudflare_dns_record" "www_redirect" {
   zone_id = var.cloudflare_zone_id
   name    = "www"
   type    = "A"
-  value   = "192.0.2.1"
+  content = "192.0.2.1"
   proxied = true
   ttl     = 3600
 
