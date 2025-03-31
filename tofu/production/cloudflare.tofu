@@ -1,3 +1,8 @@
+locals {
+  record_comment = "No traffic needed. Required so Cloudflare will apply the redirect rule. BECAUSE REASONS."
+
+}
+
 resource "cloudflare_ruleset" "redirect_all" {
   zone_id     = var.cloudflare_zone_id
   name        = "redirect-all"
@@ -32,7 +37,8 @@ resource "cloudflare_dns_record" "apex_redirect" {
   proxied = true
   ttl     = 1
 
-  comment = "No traffic needed. Required so Cloudflare will apply the redirect rule. BECAUSE REASONS."
+  comment = local.record_comment
+
 }
 
 resource "cloudflare_dns_record" "www_redirect" {
@@ -43,5 +49,5 @@ resource "cloudflare_dns_record" "www_redirect" {
   proxied = true
   ttl     = 1
 
-  comment = "No traffic needed. Required so Cloudflare will apply the redirect rule. BECAUSE REASONS."
+  comment = local.record_comment
 }
