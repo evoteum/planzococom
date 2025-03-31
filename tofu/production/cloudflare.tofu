@@ -1,4 +1,4 @@
-resource "cloudflare_ruleset" "redirect_to_planzo" {
+resource "cloudflare_ruleset" "redirect_all" {
   zone_id     = var.cloudflare_zone_id
   name        = "redirect-to-planzo"
   description = "Redirect all traffic to ${var.target_url}"
